@@ -1,0 +1,15 @@
+:host {
+    .content {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            max-height: 50px;
+        }
+    }
+
+}
