@@ -14,7 +14,7 @@
         </ng-container>
         <ng-container matColumnDef="disponiveis">
             <th mat-header-call *matHeaderCellDef> Peças para vendas </th>
-            <td mat-cell *matCellDef="let product"> {{ product.disponiveis }}</td>
+            <td mat-cell *matCellDef="let product"> {{ product.available }}</td>
         </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

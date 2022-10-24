@@ -1,3 +1,4 @@
+import { ATIVIDADE003Component } from './components/atividade003/atividade003.component';
 import { ATIVIDADE002Component } from './components/atividade002/atividade002.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: "ATIVIDADE-002",
     component: ATIVIDADE002Component
+  },
+  {
+    path: "ATIVIDADE-003",
+    component: ATIVIDADE003Component
   }
 ];
 

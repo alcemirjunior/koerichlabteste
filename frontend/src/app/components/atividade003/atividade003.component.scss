@@ -1,0 +1,42 @@
+:host {
+    width: 100%;
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 500px;
+            width: 500px;
+            background-color: rgb(224, 224, 218);
+            margin: 0 10px 10px 0;
+            padding: 20px;
+
+            img {
+                display: block;
+                width: 70%;
+                margin: auto;
+            }
+
+            .name {
+                display: flex;
+                justify-content: center;
+            }
+
+            .value {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .emptyData {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}

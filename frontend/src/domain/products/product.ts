@@ -8,8 +8,11 @@ export class Product {
         public imagem: string = ""
     ) { }
 
-    get disponiveis(): number {
+    get available(): number {
         return this.quantidade - this.defeito;
     }
 
+    get imageUrl(): string {
+        return `assets/images/${this.imagem}`
+    }
 }

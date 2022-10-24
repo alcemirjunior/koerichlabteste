@@ -19,6 +19,8 @@ import { MatTableModule } from '@angular/material/table';
 import { ATIVIDADE002Component } from './components/atividade002/atividade002.component';
 import { ProductTableComponent } from './components/common/product-table/product-table.component';
 import { FormsModule } from '@angular/forms';
+import { ATIVIDADE003Component } from './components/atividade003/atividade003.component';
+import { SearchBarComponent } from './components/common/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ATIVIDADE001Component,
     ATIVIDADE002Component,
-    ProductTableComponent
+    ProductTableComponent,
+    ATIVIDADE003Component,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

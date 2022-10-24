@@ -1,0 +1,25 @@
+<section class="filters">
+    <mat-form-field appearance="fill">
+        <mat-label>Filtro por nome</mat-label>
+        <input 
+            matInput 
+            type="text" 
+            [(ngModel)]="query"
+        >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Para venda superior a</mat-label>
+        <mat-select [(ngModel)]="quantity" name="quantity">
+            <mat-option *ngFor="let quantity of quantities; trackBy: trackByQuantity" [value]="quantity">
+                {{ quantity }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button 
+        mat-fab
+        color=""
+        (click)="emitFilters()"
+    >
+        <mat-icon>search</mat-icon>
+    </button>
+</section>

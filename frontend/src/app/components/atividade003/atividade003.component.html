@@ -1,0 +1,19 @@
+<app-search-bar (filtersChange)="searchProduct($event)"></app-search-bar>
+<section class="content" *ngIf="hasProduct; else emptyData">
+    <div *ngFor="let product of products; trackBy: trackByName" class="cards">
+        <div class="image">
+            <img src='{{ product.imageUrl }}'>
+        </div>
+        <div>
+            <div class="name">
+                {{ product.produto }}
+            </div>
+            <div class="value">
+               {{ product.valor }}
+            </div>
+        </div>
+    </div>
+</section>
+<ng-template #emptyData>
+    <h1 class="emptyData">Nenhum resultado encontrado</h1>
+</ng-template>
