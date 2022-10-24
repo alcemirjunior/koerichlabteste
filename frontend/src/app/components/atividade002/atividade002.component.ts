@@ -1,15 +1,15 @@
-import { ProductsJsonRepository } from '../../../domain/products/products-json-repository';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Product } from 'src/domain/products/product';
 import { lastValueFrom } from 'rxjs';
+import { Product } from 'src/domain/products/product';
+import { ProductsJsonRepository } from 'src/domain/products/products-json-repository';
 
 @Component({
-  selector: 'app-atividade001',
-  templateUrl: './atividade001.component.html',
-  styleUrls: ['./atividade001.component.scss'],
+  selector: 'app-atividade002',
+  templateUrl: './atividade002.component.html',
+  styleUrls: ['./atividade002.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ATIVIDADE001Component implements OnInit {
+export class Atividade002Component implements OnInit {
 
   private _products: Product[] = [];
 
