@@ -12,6 +12,9 @@ import { ProductsJsonRepository } from 'src/domain/products/products-json-reposi
 export class Atividade002Component implements OnInit {
 
   private _products: Product[] = [];
+  query: string = "";
+  quantity: number = 0;
+  quantities: number[] = [0, 50, 75];
 
   constructor(
     private produtoRepJson: ProductsJsonRepository,
@@ -23,7 +26,12 @@ export class Atividade002Component implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    this._products = await lastValueFrom (this.produtoRepJson.listProducts());
+    this._products = await lastValueFrom(this.produtoRepJson.listProducts());
+    this.changeDetector.markForCheck();
+  }
+
+  async searchProduct() {
+    this._products = await lastValueFrom(this.produtoRepJson.listProducts(this.query, this.quantity));
     this.changeDetector.markForCheck();
   }
 

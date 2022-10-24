@@ -1,11 +1,19 @@
-:host{
-    table {
-        width: 100%;
-        th {
-            text-align: left;
-          }
-          .product-header {
-            padding-left: 22px;
-          }
+:host {
+  table {
+    width: 100%;
+
+    th {
+      text-align: left;
     }
+
+    .product-header {
+      padding-left: 22px;
+    }
+  }
+
+  .emptyData {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
 }

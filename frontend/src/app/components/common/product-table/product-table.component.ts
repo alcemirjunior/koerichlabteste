@@ -11,16 +11,19 @@ export class ProductTableComponent {
 
   displayedColumns: string[] = ['produto', 'quantidade', 'defeito', 'disponiveis']
   private _products: Product[] = [];
+  hasProduct: boolean = false;
 
   constructor(
     private changeDetector: ChangeDetectorRef
   ) { }
 
-  @Input() 
+  @Input()
   set products(value: Product[]) {
-    if (value != this.products)
-    this._products = value
-    this.changeDetector.markForCheck();
+    if (value != this.products) {
+      this._products = value;
+      this.hasProduct = this.products.length > 0;
+      this.changeDetector.markForCheck();
+    }
   }
 
   get products(): Product[] {
