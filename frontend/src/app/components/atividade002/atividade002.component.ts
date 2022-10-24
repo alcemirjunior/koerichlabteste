@@ -9,7 +9,7 @@ import { ProductsJsonRepository } from 'src/domain/products/products-json-reposi
   styleUrls: ['./atividade002.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Atividade002Component implements OnInit {
+export class ATIVIDADE002Component implements OnInit {
 
   private _products: Product[] = [];
   query: string = "";

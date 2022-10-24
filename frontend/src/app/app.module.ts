@@ -16,7 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './components/home/home.component';
 import { ATIVIDADE001Component } from './components/atividade001/atividade001.component';
 import { MatTableModule } from '@angular/material/table';
-import { Atividade002Component } from './components/atividade002/atividade002.component';
+import { ATIVIDADE002Component } from './components/atividade002/atividade002.component';
 import { ProductTableComponent } from './components/common/product-table/product-table.component';
 import { FormsModule } from '@angular/forms';
 
@@ -26,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     ATIVIDADE001Component,
-    Atividade002Component,
+    ATIVIDADE002Component,
     ProductTableComponent
   ],
   imports: [
