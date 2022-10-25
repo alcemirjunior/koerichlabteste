@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import localePt from '@angular/common/locales/pt';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,9 @@ import { ProductTableComponent } from './components/common/product-table/product
 import { FormsModule } from '@angular/forms';
 import { ATIVIDADE003Component } from './components/atividade003/atividade003.component';
 import { SearchBarComponent } from './components/common/search-bar/search-bar.component';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -49,7 +53,12 @@ import { SearchBarComponent } from './components/common/search-bar/search-bar.co
     MatButtonModule,
     MatSortModule 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

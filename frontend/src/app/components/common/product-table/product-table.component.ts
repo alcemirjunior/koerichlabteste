@@ -11,7 +11,7 @@ import { Product } from 'src/domain/products/product';
 })
 export class ProductTableComponent {
 
-  displayedColumns: string[] = ['produto', 'quantidade', 'defeito', 'disponiveis']
+  displayedColumns: string[] = ['produto', 'quantidade', 'defeito', 'disponiveis', 'valor']
   private _dataSource = new MatTableDataSource<Product>();
   isEmptyData: boolean = true;
 
