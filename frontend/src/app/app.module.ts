@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { ATIVIDADE003Component } from './components/atividade003/atividade003.component';
 import { SearchBarComponent } from './components/common/search-bar/search-bar.component';
 import { registerLocaleData } from '@angular/common';
+import { SortTableDataDirective } from './components/common/product-table/sort-table-data.directive';
 
 registerLocaleData(localePt);
 
@@ -36,7 +37,8 @@ registerLocaleData(localePt);
     ATIVIDADE002Component,
     ProductTableComponent,
     ATIVIDADE003Component,
-    SearchBarComponent
+    SearchBarComponent,
+    SortTableDataDirective
   ],
   imports: [
     BrowserModule,
