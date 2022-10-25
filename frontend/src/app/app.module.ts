@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule } from '@angular/material/sort';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './components/home/home.component';
@@ -45,7 +46,8 @@ import { SearchBarComponent } from './components/common/search-bar/search-bar.co
     MatSelectModule,
     FormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSortModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

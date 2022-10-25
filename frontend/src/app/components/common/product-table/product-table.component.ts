@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Product } from 'src/domain/products/product';
 
 @Component({
@@ -10,24 +12,26 @@ import { Product } from 'src/domain/products/product';
 export class ProductTableComponent {
 
   displayedColumns: string[] = ['produto', 'quantidade', 'defeito', 'disponiveis']
-  private _products: Product[] = [];
-  hasProduct: boolean = false;
+  private _dataSource = new MatTableDataSource<Product>();
+  isEmptyData: boolean = true;
+
+  @ViewChild(MatSort) sort: MatSort = new MatSort;
 
   constructor(
     private changeDetector: ChangeDetectorRef
   ) { }
 
   @Input()
-  set products(value: Product[]) {
-    if (value != this.products) {
-      this._products = value;
-      this.hasProduct = this.products.length > 0;
+  set data(data: Product[]) {
+    if (data != this.dataSource.data) {
+      this._dataSource = new MatTableDataSource(data);
+      this._dataSource.sort = this.sort;
+      this.isEmptyData = data.length > 0;
       this.changeDetector.markForCheck();
     }
   }
 
-  get products(): Product[] {
-    return this._products;
+  get dataSource(): MatTableDataSource<Product> {
+    return this._dataSource;
   }
-
 }

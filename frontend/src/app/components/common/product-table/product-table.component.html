@@ -1,20 +1,20 @@
-<section *ngIf="hasProduct; else emptyData">
-    <table mat-table [dataSource]="products">
+<section>
+    <table mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="produto">
-            <th class="product-header" mat-header-call *matHeaderCellDef> Nome do Produto </th>
-            <td mat-cell *matCellDef="let product"> {{ product.produto }}</td>
+            <th class="product-header" mat-header-call *matHeaderCellDef mat-sort-header>Nome do Produto</th>
+            <td mat-cell *matCellDef="let element"> {{ element.produto }}</td>
         </ng-container>
         <ng-container matColumnDef="quantidade">
-            <th mat-header-call *matHeaderCellDef> Quantidade em estoque </th>
-            <td mat-cell *matCellDef="let product"> {{ product.quantidade }}</td>
+            <th mat-header-call *matHeaderCellDef mat-sort-header>Quantidade em estoque</th>
+            <td mat-cell *matCellDef="let element"> {{ element.quantidade }}</td>
         </ng-container>
         <ng-container matColumnDef="defeito">
-            <th mat-header-call *matHeaderCellDef> Peças com defeitos </th>
-            <td mat-cell *matCellDef="let product"> {{ product.defeito }}</td>
+            <th mat-header-call *matHeaderCellDef mat-sort-header>Peças com defeitos</th>
+            <td mat-cell *matCellDef="let element"> {{ element.defeito }}</td>
         </ng-container>
         <ng-container matColumnDef="disponiveis">
-            <th mat-header-call *matHeaderCellDef> Peças para vendas </th>
-            <td mat-cell *matCellDef="let product"> {{ product.available }}</td>
+            <th mat-header-call *matHeaderCellDef>Peças para vendas</th>
+            <td mat-cell *matCellDef="let element">{{ element.available }}</td>
         </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -22,6 +22,6 @@
     </table>
 </section>
 
-<ng-template #emptyData>
+<ng-container *ngIf="!isEmptyData">
     <h1 class="emptyData">Nenhum resultado encontrado</h1>
-</ng-template>
+</ng-container>
