@@ -67,8 +67,31 @@ Não queremos um visual padrão, agora queremos a sua criatividade, estilizar a 
 
 Desenvolver um backend em java para cadastrar, editar itens a lista.
 
-### EXECUÇÃO DO TESTE
+## EXECUÇÃO DO TESTE
 
-Aqui deve ser editado pelo desenvolvedor a forma de como podemos executar o projeto para avaliação. Incluindo versões das ferramentas necessárias para rodar a aplicação: Ex: NodeJS 15, Java 1.8 etc... Como rodar os testes unitários e demais informações pertinentes ao projeto.
+### Frontend:
+    
+    - Angular CLI: 14.2.6
+    - Node: 14.17.4
+    - Package Manager: yarn 1.22.15
+    
+    ```bash
+    # Para Executar:
+    cd frontend
+    yarn
+    yarn klab:start
+    ```
+
+### Backend:
+
+    - Java: 17 (Azul Zulu Community 17.0.4)
+    - docker e docker compose
+
+    ```bash
+    # Para Executar:
+    cd backend
+    docker compose up -d
+    ./mvnw spring-boot:run
+    ```
 
 # ATENÇÃO TESTES SEM INSTRUÇÕES SERÃO REPROVADOS
