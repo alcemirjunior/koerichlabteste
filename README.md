@@ -90,4 +90,8 @@ Desenvolver um backend em java para cadastrar, editar itens a lista.
     docker compose up -d
     ./mvnw spring-boot:run
 
+### Postman:
+
+    - link para importação da coleção de requisições para testar API: https://www.getpostman.com/collections/59ce56050627548afda9
+
 # ATENÇÃO TESTES SEM INSTRUÇÕES SERÃO REPROVADOS
