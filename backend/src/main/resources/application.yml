@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: product
+  datasource:
+    password: klab
+    url: jdbc:postgresql://localhost:5432/klab
+    username: klab
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      id:
+        new_generator_mappings: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

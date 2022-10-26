@@ -1,0 +1,5 @@
+INSERT INTO tb_product (name, quantity, defect, value, image_url, created_at) VALUES ('Cadeira Gamer', 59, 13, 599.12, 'cadeira.jpeg', NOW())
+INSERT INTO tb_product (name, quantity, defect, value, image_url, created_at) VALUES ('Sofa', 85, 10, 323.00, 'sofa.jpeg', NOW())
+INSERT INTO tb_product (name, quantity, defect, value, image_url, created_at) VALUES ('Televisão de 55 polegadas', 64, 13, 2399.99, 'tv.jpg', NOW())
+INSERT INTO tb_product (name, quantity, defect, value, image_url, created_at) VALUES ('Maquina de lavar roupas', 34, 0, 1299.23, 'lavadoura.webp', NOW())
+INSERT INTO tb_product (name, quantity, defect, value, image_url, created_at) VALUES ('Notebook trabalho', 50, 12, 3500.00, 'notebook.jpeg', NOW())
