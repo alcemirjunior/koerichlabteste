@@ -75,23 +75,19 @@ Desenvolver um backend em java para cadastrar, editar itens a lista.
     - Node: 14.17.4
     - Package Manager: yarn 1.22.15
     
-    ```bash
     # Para Executar:
     cd frontend
     yarn
     yarn klab:start
-    ```
 
 ### Backend:
 
     - Java: 17 (Azul Zulu Community 17.0.4)
     - docker e docker compose
 
-    ```bash
     # Para Executar:
     cd backend
     docker compose up -d
     ./mvnw spring-boot:run
-    ```
 
 # ATENÇÃO TESTES SEM INSTRUÇÕES SERÃO REPROVADOS
