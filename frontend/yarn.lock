@@ -4321,6 +4321,11 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng-mocks@^14.3.1:
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/ng-mocks/-/ng-mocks-14.3.1.tgz#5b2fe91531555491f7b6c9b84bc156a324756841"
+  integrity sha512-1K8JeTtHUHi29110KghI1uRFxB4VJdz956fTAib+Vzqlpz0nZMUqcaDa1aoTkJEfFZ++sYpf2MLCOFprbDIfnQ==
+
 ngx-take-until-destroy@^5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/ngx-take-until-destroy/-/ngx-take-until-destroy-5.4.0.tgz#6c8606ee956584dc947e2eb609c48b8f98b09900"

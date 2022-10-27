@@ -1,22 +1,21 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
+import { environment } from "src/environments/environment";
 import { Product } from "./product";
-
-export const REP_URL = 'assets/repositories/repositorio.json'
 
 @Injectable({ providedIn: 'root' })
 export class ProductsJsonRepository {
 
-    constructor(public http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
     listProducts(query: string = "", quantity: number = 0): Observable<Product[]> {
-        return this.http.get<Product[]>(REP_URL)
+        return this.http.get<Product[]>(environment.API_URL)
             .pipe(
                 map(products => products
                     .map(product => Object.assign(new Product(), product))
-                    .filter(it => it.quantidade >= quantity)
-                    .filter(it => it.produto.toLowerCase().includes(query.toLowerCase()))
+                    .filter(product => product.quantidade >= quantity)
+                    .filter(product => product.produto.toLowerCase().includes(query.toLowerCase()))
                 )
             )
     }
